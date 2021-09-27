@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Edit Task {% endblock %}
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+<div class="modal modal-signin position-static d-block  py-5" tabindex="-1" role="dialog" id="modalSignin">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content rounded-5 shadow">
+			<div class="modal-header p-5 pb-4 border-bottom-0">
+				<!-- <h5 class="modal-title">Modal title</h5> -->
+				<h2 class="fw-bold mb-0">Edit Form</h2>
+				<a type="button" class="btn-close" href="{% url 'task_list' %}"></a>
+			</div>
+
+			<div class="modal-body p-5 pt-0">
+
+				<form method="POST" action="">
+					{% csrf_token %}
+					<div class="form-floating mb-3">						
+                        {{form}}
+						<label for="floatingInput">Title</label>
+					</div>
+					<button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Change</button>
+				</form>				
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block extra_js %}{% endblock %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Back</a>
+</div>
+
+
+<div class="card-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Submit">
+    </form>
+</div>
+
+
