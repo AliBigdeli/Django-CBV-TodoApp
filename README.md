@@ -96,6 +96,7 @@ A simple view of the project model schema.
 </p>
 
 ### Todo
+- [ ] leave comments for codes
 - [ ] add unit tests
 - [ ] add heroku config files
 - [ ] complete the documentation
