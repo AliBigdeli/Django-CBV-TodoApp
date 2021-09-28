@@ -51,7 +51,7 @@ Create an enviroment in order to keep the repo dependencies seperated from your 
 python -m venv venv
 ```
 
-Make sure to install the dependencies of the project thought the requirements.txt file.
+Make sure to install the dependencies of the project through the requirements.txt file.
 ```bash
 pip install -r requirements.txt
 ```
