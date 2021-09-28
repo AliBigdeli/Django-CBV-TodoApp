@@ -25,7 +25,7 @@
 ### Demo
 This is a brief demo of the functionality of the project
 <p align="center">
-<img src="https://user-images.githubusercontent.com/29748439/134964145-c9949aa4-7042-453e-98e3-41c192c268bc.gif" alt="database schema" width="720"/>
+<img src="https://user-images.githubusercontent.com/29748439/135058615-5fcea765-464e-4630-aa6c-093fabad2ed9.gif" alt="database schema" width="720"/>
 </p>
 
 ### Features
