@@ -21,6 +21,9 @@ class TaskList(LoginRequiredMixin, ListView):
     context_object_name = "tasks"
     template_name = "todo/list_task.html"
 
+    def get_queryset(self):
+        return self.model.objects.filter(user=self.request.user)
+
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
@@ -37,6 +40,7 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy("task_list")
     form_class = TaskUpdateForm
     template_name = "todo/update_task.html"
+    
 
 
 class TaskComplete(LoginRequiredMixin, View):
